@@ -100,9 +100,9 @@ uint8_t LIS331::readReg(uint8_t reg_address)
   return data;
 }
 
-uint8_t LIS331::writeReg(uint8_t write_reg_address, uint8_t data)
+void LIS331::writeReg(uint8_t write_reg_address, uint8_t data)
 {
-  LIS331_write(write_reg_address, &data, 1);
+	LIS331_write(write_reg_address, &data, 1);
 }
 
 float LIS331::convertToG(int maxScale, int reading)
