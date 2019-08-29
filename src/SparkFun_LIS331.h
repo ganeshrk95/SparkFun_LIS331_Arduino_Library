@@ -51,6 +51,7 @@ class LIS331
   void setODR(data_rate drate);
   void readAxes(int16_t &x, int16_t &y, int16_t &z);
   uint8_t readReg(uint8_t reg_address);
+  uint8_t writeReg(uint8_t write_reg_address);
   float convertToG(int maxScale, int reading);
   void setHighPassCoeff(high_pass_cutoff_freq_cfg hpcoeff);
   void enableHPF(bool enable);
